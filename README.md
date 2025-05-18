@@ -12,6 +12,8 @@
 1. JDK **17**을 설치합니다.
 2. Android Studio에서 Android SDK **35** 이상이 설치되어 있어야 합니다.
 3. 프로젝트를 열고 Gradle 동기화 후 `./gradlew build` 명령 또는 IDE의 *Build* 기능을 이용해 빌드합니다.
+   - 네트워크 접근이 어려운 환경에서는 Gradle을 오프라인 모드(`--offline`)로 실행하거나,
+     미리 Gradle 배포 파일을 다운로드해 `gradle/wrapper` 디렉터리에 위치시켜야 합니다.
 
 ## Gradle 오프라인 실행
 Gradle Wrapper는 처음 실행될 때 필요한 배포 파일을 `services.gradle.org`에서 다운로드합니다. 이 서버에 접근할 수 없는 환경에서는 Gradle 분배 파일을 받지 못해 빌드에 실패할 수 있습니다.
