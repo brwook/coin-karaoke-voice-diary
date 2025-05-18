@@ -1,7 +1,8 @@
 package com.example.coin_karaoke_voice_diary
 
-import android.content.Context
-import androidx.test.core.app.ApplicationProvider
+import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import org.junit.runner.RunWith
 import com.example.coin_karaoke_voice_diary.data.AppDatabase
 import com.example.coin_karaoke_voice_diary.data.Recording
 import kotlinx.coroutines.runBlocking
@@ -10,12 +11,13 @@ import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 
+@RunWith(AndroidJUnit4::class)
 class RecordingDaoTest {
     private lateinit var db: AppDatabase
 
     @Before
     fun setup() {
-        val context = ApplicationProvider.getApplicationContext<Context>()
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
         db = AppDatabase.createInMemory(context)
     }
 
