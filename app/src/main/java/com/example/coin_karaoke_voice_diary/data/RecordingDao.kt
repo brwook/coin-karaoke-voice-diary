@@ -10,9 +10,13 @@ interface RecordingDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(recording: Recording): Long
 
-    @Query("SELECT * FROM recordings ORDER BY recordedAt DESC")
+    @Query(
+        "SELECT id, filePath, thumbnail_path, title, artist, recordedAt FROM recordings ORDER BY recordedAt DESC"
+    )
     suspend fun getAll(): List<Recording>
 
-    @Query("SELECT * FROM recordings WHERE id = :id")
+    @Query(
+        "SELECT id, filePath, thumbnail_path, title, artist, recordedAt FROM recordings WHERE id = :id"
+    )
     suspend fun getById(id: Long): Recording?
 }
