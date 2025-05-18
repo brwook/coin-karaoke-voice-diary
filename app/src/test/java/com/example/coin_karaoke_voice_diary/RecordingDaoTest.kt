@@ -29,6 +29,7 @@ class RecordingDaoTest {
         val dao = db.recordingDao()
         val recording = Recording(
             filePath = "path/to/file.wav",
+            thumbnailPath = "path/to/thumbnail.jpg",
             title = "Song Title",
             artist = "Artist",
             recordedAt = 1L
@@ -41,5 +42,6 @@ class RecordingDaoTest {
         assertEquals("Song Title", item.title)
         assertEquals("Artist", item.artist)
         assertEquals("path/to/file.wav", item.filePath)
+        assertEquals("path/to/thumbnail.jpg", item.thumbnailPath)
     }
 }
