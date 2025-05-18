@@ -2,6 +2,7 @@ package com.example.coin_karaoke_voice_diary
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import org.junit.runner.RunWith
 import com.example.coin_karaoke_voice_diary.data.AppDatabase
 import com.example.coin_karaoke_voice_diary.data.Recording
 import kotlinx.coroutines.runBlocking
