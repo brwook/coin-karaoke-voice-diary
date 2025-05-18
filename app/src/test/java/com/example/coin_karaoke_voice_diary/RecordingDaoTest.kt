@@ -43,5 +43,8 @@ class RecordingDaoTest {
         assertEquals("Artist", item.artist)
         assertEquals("path/to/file.wav", item.filePath)
         assertEquals("path/to/thumbnail.jpg", item.thumbnailPath)
+
+        val byId = dao.getById(item.id)
+        assertEquals(item, byId)
     }
 }
