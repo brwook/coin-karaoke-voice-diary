@@ -19,3 +19,6 @@
 - **로컬 DB 모듈**: 녹음 메타데이터를 앱 내부 데이터베이스(Room/SQLite 등)에 저장해 빠르게 조회할 수 있게 합니다.
 
 이 문서는 프로젝트 초기 단계의 안내용이며, 세부 사항은 향후 개발 과정에서 변경될 수 있습니다.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
